@@ -1,3 +1,5 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
@@ -19,6 +21,17 @@ end
 get"/:name/sleephistory" do
   baby_sleep_history = Baby.find_by(name:params[:name]).sleeps
   baby_sleep_history.to_json
+end
+
+delete "/:name/sleephistory/:id" do
+sleep = Sleep.find(params[:id])
+sleep.destroy
+sleep.to_json
+end
+
+post "/sleeps" do 
+  new_sleep = Sleep.create(woke: params[:woke], hours: params[:hour], minutes: params[:min], baby_id: params[:baby_id])
+  new_sleep.to_json
 end
 
 end #end of ApplicationController class
