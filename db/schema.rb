@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_01_181659) do
+ActiveRecord::Schema.define(version: 2022_01_03_215442) do
 
   create_table "babies", force: :cascade do |t|
     t.string "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_01_01_181659) do
   end
 
   create_table "sleeps", force: :cascade do |t|
-    t.time "woke"
+    t.string "woke"
     t.integer "hours"
     t.integer "minutes"
     t.integer "baby_id"

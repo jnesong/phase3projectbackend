@@ -16,4 +16,9 @@ get "/:name/lastslept" do
   baby_last_sleep.to_json
 end
 
+get"/:name/sleephistory" do
+  baby_sleep_history = Baby.find_by(name:params[:name]).sleeps
+  baby_sleep_history.to_json
+end
+
 end #end of ApplicationController class

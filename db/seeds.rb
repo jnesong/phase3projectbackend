@@ -25,12 +25,15 @@ joinship4 = Joinship.create(shipname: "Song", user_id: user5.id, baby_id: baby3.
 joinship5 = Joinship.create(shipname: "SongJones", user_id: user5.id, baby_id: baby1.id)
 joinship6 = Joinship.create(shipname: "SongKim", user_id: user5.id, baby_id: baby2.id)
 
-sleep1 = Sleep.create(woke: Time.parse("12-25-2021", 07:40), hours: 2, minutes: 20, baby_id: baby1.id)
-sleep2 = Sleep.create(woke: Time.strptime("12-25-2021 16:40", "%m-%d-%Y %H:%M"), hours: 2, minutes: 00, baby_id: baby1.id)
-sleep3 = Sleep.create(woke: Time.strptime("12-25-2021 08:00", "%m-%d-%Y %H:%M"), hours: 4, minutes: 30, baby_id: baby2.id)
-sleep4 = Sleep.create(woke: Time.strptime("12-25-2021 17:00", "%m-%d-%Y %H:%M"), hours: 2, minutes: 40, baby_id: baby2.id)
-sleep5 = Sleep.create(woke: Time.strptime("12-25-2021 05:00", "%m-%d-%Y %H:%M"), hours: 4, minutes: 00, baby_id: baby3.id)
-sleep6 = Sleep.create(woke: Time.strptime("12-25-2021 17:00", "%m-%d-%Y %H:%M"), hours: 1, minutes: 20, baby_id: baby3.id)
+sleep1 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4, format: :long), hours: 6, minutes: 00, baby_id: baby1.id)
+sleep2 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4, format: :long), hours: 2, minutes: 00, baby_id: baby1.id)
+sleep3 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4, format: :long), hours: 4, minutes: 30, baby_id: baby2.id)
+sleep4 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4, format: :long), hours: 2, minutes: 40, baby_id: baby2.id)
+sleep5 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4 , format: :long), hours: 5, minutes: 00, baby_id: baby3.id)
+sleep6 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4, format: :long), hours: 9, minutes: 20, baby_id: baby3.id)
+sleep7 = Sleep.create(woke: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now - 4, format: :long), hours: 1, minutes: 00, baby_id: baby1.id)
+
+
 
 
 
